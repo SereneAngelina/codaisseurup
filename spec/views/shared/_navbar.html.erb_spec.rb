@@ -20,8 +20,8 @@ describe "shared/_navbar.html.erb" do
 
     it "renders first and last name" do
       render
-      expect(rendered).to have_content user_profile.first_name
-      expect(rendered).to have_content user_profile.last_name
+      expect(rendered).to have_content profile.first_name
+      expect(rendered).to have_content profile.last_name
     end
   end
 end
