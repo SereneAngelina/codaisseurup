@@ -43,6 +43,10 @@ gem 'devise', '~> 4.2'
 # Use date validator for date validations
 gem 'date_validator', '~> 0.9.0'
 
+# Use carrierwave for image upload
+gem 'carrierwave', '0.11.2'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
