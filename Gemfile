@@ -46,6 +46,12 @@ gem 'date_validator', '~> 0.9.0'
 # Use carrierwave for image upload
 gem 'carrierwave', '0.11.2'
 
+gem 'cloudinary', '1.2.3'
+
+# For deis
+
+ruby '2.4.1'
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do
