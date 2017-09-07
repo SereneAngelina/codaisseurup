@@ -4,7 +4,26 @@
   <div class="panel-body">
 
     <p>Event Name: <%= @event.name %></p>
-    <p>Host: <%= @event.user.email %></p>
+    <p>Host Email: <%= @event.user.email %></p>
+    <h3>Event Description: </h3>
+    <p><h4><%= @event.description %></h4></p>
+    <p>Location: <%= @event.location %></p>
+    <p>Price: <%= @event.price %></p>
+    <p>Capacity <%= @event.capacity %></p>
+    <p>Starts at: <%= @event.starts_at %></p>
+    <p>Ends at: <%= @event.ends_at %></p>
+    <h3> Bonus Pleasure: </h3>
+    <ul>
+    <li><%= !@event.includes_food ? ("<s>Food</s>").html_safe : "Food" %></li>
+    <li><%= !@event.includes_drinks ? ("<s>Drinks</s>").html_safe : "Drinks" %></li>
+  </ul>
+
+  <!-- Themes -->
+<h4>Categories:</h4>
+<% @categories.each do |category| %>
+  <span class="label label-primary"><%= category.name %></span>
+<% end %>
+
   </div>
 </div>
 

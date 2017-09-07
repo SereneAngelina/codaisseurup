@@ -7,19 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Theme.destroy_all
+Category.destroy_all
 
 
-modern_and_minimal = Theme.create(name: "Modern and Minimal")
-sleek_and_sophisticated = Theme.create(name: "Sleek and Sophisticated")
-warm_and_cozy = Theme.create(name: "Warm and Cozy")
-room_with_a_view = Theme.create(name: "Room with a View")
-elegant_and_ornate = Theme.create(name: "Elegant and Ornate")
-a_mans_touch = Theme.create(name: "A Man's Touch")
-white_washed = Theme.create(name: "White Washed")
-tempting_terrace = Theme.create(name: "Tempting Terrace")
+
+sports_and_fitness = Category.create(name: "sports_and_fitness")
+tech = Category.create(name: "tech")
+music = Category.create(name: "music")
+family = Category.create(name: "family")
+outdoors_and_adventures = Category.create(name: "outdoors_and_adventures")
+writing = Category.create(name: "writing")
+film = Category.create(name: "film")
+food_and_drink = Category.create(name: "food_and_drink")
+
+
 
 jane = User.create!(email: "janey@gmail.com", password: "12345678")
+monica = User.create!(email: "monica@gmail.com", password: "7654321")
 
 event3 = Event.create!(name:"Meet Up", description:"Place where the coders and the teachers meet. Share some information and grow with each other",
-location:"Weesperplein", price:20.00, capacity:50, includes_food:false, includes_drinks:true, starts_at:"2017-09-07 14:00:00", ends_at:"2017-09-08 14:00:00", active:true, user: jane, themes: [modern_and_minimal, sleek_and_sophisticated])
+location:"Weesperplein", price:20.00, capacity:50, includes_food:false, includes_drinks:true, starts_at:"2017-09-07 14:00:00", ends_at:"2017-09-08 14:00:00", active:true, user: jane, categories: [music, tech])
+
+
+event4 = Event.create!(name:"Music Contest", description:"Come and sing..... Show your talents to us",
+location:"Amsterdam", price:10.00, capacity:70, includes_food:false, includes_drinks:true, starts_at:"2017-09-07 14:00:00", ends_at:"2017-09-08 14:00:00", active:true, user: jane, categories: [music, family])

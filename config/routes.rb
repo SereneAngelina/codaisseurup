@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
 
 
-  resources :themes
+  resources :categories
+
   root to: 'pages#home'
 
 

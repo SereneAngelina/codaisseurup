@@ -1,12 +1,12 @@
 class Event < ApplicationRecord
   belongs_to :user
 
-  has_and_belongs_to_many :themes
+  has_and_belongs_to_many :categories
 
   validates :name, presence: true
   validates :description, presence: true, length: { maximum: 500 }
-  validates :starts_at, presence: true#,date: { before:  :starts_at}
-  validates :ends_at, presence: true
+  #validates :starts_at, presence: true#,date: { before:  :starts_at}
+  #validates :ends_at, presence: true
   validate :end_date_after_start_date
 
 
