@@ -18,13 +18,21 @@
     <li><%= !@event.includes_drinks ? ("<s>Drinks</s>").html_safe : "Drinks" %></li>
   </ul>
 
-  <!-- Themes -->
+  <!-- Categories -->
 <h4>Categories:</h4>
 <% @categories.each do |category| %>
   <span class="label label-primary"><%= category.name %></span>
 <% end %>
 
+<h4>Photos</h4>
+<% @event.photos.each do |photo| %>
+  <%= image_tag photo.image,:size => "260x260", class: "img-thumbnail img-responsive" %>
+<% end %>
+
+
+
   </div>
 </div>
+
 
 <%= link_to "Back", events_path, class: "btn btn-default" %>

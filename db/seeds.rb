@@ -5,9 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-User.destroy_all
+Photo.destroy_all
 Category.destroy_all
+Event.destroy_all
+Profile.destroy_all
+User.destroy_all
+
+
+
+
+
 
 
 
@@ -29,5 +36,15 @@ event3 = Event.create!(name:"Meet Up", description:"Place where the coders and t
 location:"Weesperplein", price:20.00, capacity:50, includes_food:false, includes_drinks:true, starts_at:"2017-09-07 14:00:00", ends_at:"2017-09-08 14:00:00", active:true, user: jane, categories: [music, tech])
 
 
-event4 = Event.create!(name:"Music Contest", description:"Come and sing..... Show your talents to us",
+event4 = Event.create!(name:"Code Contest", description:"Come, code and win. Show your talents to us",
 location:"Amsterdam", price:10.00, capacity:70, includes_food:false, includes_drinks:true, starts_at:"2017-09-07 14:00:00", ends_at:"2017-09-08 14:00:00", active:true, user: jane, categories: [music, family])
+
+
+photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504780265/images2_rntnt2.jpg", event: event3)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504780250/banner-772x250_rad6jy.png", event: event3)
+photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504780244/00-meetup-590.__large_preview.__large_preview_qblbiw.jpg", event: event3)
+
+
+
+photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504779962/Coding-Contest_Wuerfel-_tra-300x291_jnswka.png", event: event4)
+photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504779965/Code-a-thon_WebBanner_Sep16_v3_plgtuv.png", event: event4)
