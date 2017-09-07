@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :event do
+
     name                 { Faker::Name.name }
     description          { Faker::Lorem.sentence(40) }
     location             { Faker::Address.city }
@@ -19,4 +20,7 @@ FactoryGirl.define do
       active false
     end
   end
+
+
+
 end
