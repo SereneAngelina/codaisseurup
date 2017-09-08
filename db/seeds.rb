@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Photo.destroy_all
 Category.destroy_all
+Registration.destroy_all
 Event.destroy_all
 Profile.destroy_all
 User.destroy_all
@@ -48,3 +49,8 @@ photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/im
 
 photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504779962/Coding-Contest_Wuerfel-_tra-300x291_jnswka.png", event: event4)
 photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dvmfuraf4/image/upload/v1504779965/Code-a-thon_WebBanner_Sep16_v3_plgtuv.png", event: event4)
+
+
+
+Registration.create!(user: jane, event: event4, status: true, price: 25.0, guests_count: 2)
+Registration.create!(user: monica, event: event4, status: true, price: 25.0, guests_count: 2)
