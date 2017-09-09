@@ -1,3 +1,16 @@
+<!-- Registration Form -->
+<% if current_user != @event.user %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Register in this Event</div>
+
+    <div class="panel-body">
+      <%= render 'registrations/form' %>
+    </div>
+  </div>
+<% end %>
+
+
+
 <div class="panel panel-primary">
   <div class="panel-heading"><%= @event.name %></div>
 
