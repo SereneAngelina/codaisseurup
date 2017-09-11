@@ -17,4 +17,8 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:new, :edit, :create, :update]
   resources :photos
+
+  namespace :api do
+    resources :events
+  end
 end
