@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :events, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-
+  has_secure_token
 
   has_many :registrations, dependent: :destroy
 

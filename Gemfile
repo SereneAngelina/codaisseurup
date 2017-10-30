@@ -30,12 +30,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'active_model_serializers'
 # Use Bootstrap for styling
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jQuery for easier javascript
 gem 'jquery-rails', '~> 4.3.1'
+
+gem 'jquery-ui-rails', '~> 5.0.5'
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
@@ -47,6 +49,10 @@ gem 'date_validator', '~> 0.9.0'
 gem 'carrierwave', '0.11.2'
 
 gem 'cloudinary', '1.2.3'
+
+gem 'has_secure_token'
+
+
 
 # For deis
 
